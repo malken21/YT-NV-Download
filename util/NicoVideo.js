@@ -11,7 +11,7 @@ let pyshell;
 
 exports.start = (url) => {//----------ニコニコ動画 開始----------//
     return new Promise((resolve) => {
-        pyshell = new PythonShell('./getNicoVideo.py', options);
+        pyshell = new PythonShell('./util/getNicoVideo.py', options);
         pyshell.on('message', function (data) {
             resolve(data);
         });
